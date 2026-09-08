@@ -251,6 +251,12 @@
     text-align: center; padding: 32px 0 0; font-size: 12px; color: var(--text-muted);
   }
 
+  .settlement-people { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .settlement-metric { margin: 20px 0; }
+  .settlement-metric .label { font-size: 12px; font-weight: 600; color: var(--text-secondary); }
+  .settlement-number { font-size: clamp(26px, 3vw, 40px); font-weight: 750; line-height: 1.3; margin: 6px 0; font-variant-numeric: tabular-nums; }
+  .settlement-people small { color: var(--text-secondary); font-size: 11px; }
+  @media (max-width: 760px) { .settlement-people { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -799,15 +805,25 @@
   <!-- ==================== SETTLEMENT TAB ==================== -->
   <div id="tab-settlement" class="tab-content">
     <div class="section-title">Settlement — Sof &amp; Perry (James)</div>
-    <div class="card">
-      <h3>Money Paid &amp; Rental Income Received</h3>
-      <div style="overflow-x:auto"><table class="data-table" id="settlement-comparison">
-        <thead><tr><th>Person</th><th class="amount">Paid</th><th class="amount">Rental Income Received</th><th>Details</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Perry (James)</strong></td><td class="amount">Rp 0<br><small>To be confirmed</small></td><td class="amount">Rp 121,000,000</td><td>Ryan: Rp 101,000,000 (10 &amp; 12 Apr 2024)<br>John &amp; Adam: Rp 20,000,000 (6 Aug 2026)<br>Received through James’s Danamon account</td></tr>
-          <tr><td><strong>Sof</strong></td><td class="amount">Rp 110,069,500</td><td class="amount">Rp 34,987,088<br><small>After expenses</small></td><td>Paid: overall expenses funded by Sof<br>Received: John &amp; Adam rental income remaining after expenses</td></tr>
-        </tbody>
-      </table></div>
+    <div class="settlement-people" id="settlement-comparison">
+      <div class="card">
+        <h3>Perry (James)</h3>
+        <div class="settlement-metric"><div class="label">PAID</div><div class="settlement-number">Rp 0</div><small>To be confirmed</small></div>
+        <div class="settlement-metric"><div class="label">RENTAL INCOME RECEIVED</div><div class="settlement-number" style="color:var(--series-4)">Rp 121,000,000</div></div>
+        <table class="data-table"><tbody>
+          <tr><td>Ryan<br><small>10 &amp; 12 Apr 2024</small></td><td class="amount">Rp 101,000,000</td></tr>
+          <tr><td>John &amp; Adam<br><small>6 Aug 2026</small></td><td class="amount">Rp 20,000,000</td></tr>
+        </tbody></table>
+      </div>
+      <div class="card">
+        <h3>Sof</h3>
+        <div class="settlement-metric"><div class="label">PAID</div><div class="settlement-number">Rp 110,069,500</div><small>Overall paid by Sof</small></div>
+        <div class="settlement-metric"><div class="label">RENTAL INCOME — AFTER EXPENSES</div><div class="settlement-number" style="color:var(--series-sof)">Rp 34,987,088</div></div>
+        <table class="data-table"><tbody>
+          <tr><td>John &amp; Adam<br><small>Before expenses</small></td><td class="amount">Rp 79,993,552</td></tr>
+          <tr><td>Expenses<br><small>May–Sep 2026</small></td><td class="amount">(Rp 45,006,464)</td></tr>
+        </tbody></table>
+      </div>
     </div>
 
     <div class="card">
