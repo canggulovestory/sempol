@@ -798,42 +798,57 @@
 
   <!-- ==================== SETTLEMENT TAB ==================== -->
   <div id="tab-settlement" class="tab-content">
-    <div class="section-title">50/50 Settlement</div>
-
-    <div class="settlement-card">
-      <h3>Settlement Summary</h3>
-      <div class="settlement-row">
-        <span class="s-label" style="color:#fff;font-weight:600">Total Expenses</span>
-        <span class="s-value" style="font-size:18px" id="sett-total">Rp 155,075,964</span>
-      </div>
-      <div style="height:1px;background:rgba(255,255,255,0.2);margin:8px 0"></div>
-      <div class="settlement-row">
-        <span class="s-label">50% share owed</span>
-        <span class="s-value" style="color:#7ecbff" id="sett-half">Rp 77,537,982</span>
-      </div>
-      <div style="height:1px;background:rgba(255,255,255,0.2);margin:8px 0"></div>
-      <div class="settlement-note" style="padding-top:12px;color:rgba(255,255,255,0.6)">
-        50/50 partnership expense settlement
-      </div>
+    <div class="section-title">Settlement — Money Received &amp; Expenses Paid</div>
+    <div class="stats-row">
+      <div class="stat-card"><div class="label">James / Perry</div><div class="value">Rp 121,000,000</div><div class="sub">Recorded transfers to James (Danamon)</div></div>
+      <div class="stat-card"><div class="label">Sof received before expenses</div><div class="value accent">Rp 79,993,552</div><div class="sub">John &amp; Adam income after refund and James transfer</div></div>
+      <div class="stat-card"><div class="label">Overall paid by Sof</div><div class="value">Rp 110,069,500</div><div class="sub">Listed expenses minus rental income coverage</div></div>
     </div>
 
-    <!-- Visual breakdown -->
     <div class="card">
-      <h3>
-        <span class="dot" style="background:var(--series-sof)"></span> Expense Breakdown
-      </h3>
+      <h3>Where the Rental Money Went</h3>
+      <div style="overflow-x:auto"><table class="data-table">
+        <thead><tr><th>Recipient / Use</th><th>Source / Details</th><th class="amount">Amount</th></tr></thead>
+        <tbody>
+          <tr><td>James (Danamon)</td><td>Ryan — 10 &amp; 12 April 2024</td><td class="amount">Rp 101,000,000</td></tr>
+          <tr><td>James (Danamon)</td><td>John &amp; Adam — 6 August 2026</td><td class="amount">Rp 20,000,000</td></tr>
+          <tr><td>Sof received before expenses</td><td>John &amp; Adam — after deposit refund and transfer to James</td><td class="amount">Rp 79,993,552</td></tr>
+          <tr><td>I Nyoman Suardana (BCA)</td><td>Ryan — April 2024</td><td class="amount">Rp 420,000,000</td></tr>
+          <tr><td>I Nyoman Sugiarta (BNI)</td><td>Ryan — April 2024</td><td class="amount">Rp 200,000,000</td></tr>
+          <tr class="total-row"><td colspan="2">TOTAL NET RENTAL INCOME DISTRIBUTED</td><td class="amount">Rp 820,993,552</td></tr>
+        </tbody>
+      </table></div>
+      <p style="font-size:12px;color:var(--text-secondary);margin-top:12px">James / Perry shows payments recorded to James. No separate transfer to Perry is listed.</p>
+    </div>
 
-      <div style="margin:20px 0">
-        <div style="font-size:12px;color:var(--text-muted);font-weight:600;margin-bottom:6px">TOTAL EXPENSES</div>
-        <div class="split-bar" style="height:36px">
-          <div class="segment" style="flex:10343;background:var(--series-sof);font-size:12px">Utilities</div>
-          <div class="segment" style="flex:144733;background:var(--series-perry);font-size:12px">Maintenance &amp; Improvements</div>
-        </div>
-        <div class="legend" style="margin-top:8px">
-          <div class="legend-item"><div class="legend-swatch" style="background:var(--series-sof)"></div> Utilities Rp 10.34M</div>
-          <div class="legend-item"><div class="legend-swatch" style="background:var(--series-perry)"></div> Maintenance &amp; Improvements Rp 144.73M</div>
-        </div>
-      </div>
+    <div class="card">
+      <h3>Sof — Overall Expenses Paid</h3>
+      <table class="data-table"><tbody>
+        <tr><td>Total listed expenses</td><td class="amount">Rp 155,075,964</td></tr>
+        <tr><td>Covered by rental income — May–September 2026</td><td class="amount">(Rp 45,006,464)</td></tr>
+        <tr class="total-row"><td>OVERALL PAID BY SOF</td><td class="amount">Rp 110,069,500</td></tr>
+      </tbody></table>
+      <h3 style="margin-top:24px">Sof — Rental Income Balance</h3>
+      <table class="data-table"><tbody>
+        <tr><td>What Sof received before expenses</td><td class="amount">Rp 79,993,552</td></tr>
+        <tr><td>Expenses covered from rental income</td><td class="amount">(Rp 45,006,464)</td></tr>
+        <tr class="total-row"><td>REMAINING RENTAL INCOME</td><td class="amount">Rp 34,987,088</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="card">
+      <h3>Contract &amp; Stay History</h3>
+      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:16px">Original lease: signed 31 October 2022 · Lease period 25 December 2022–25 December 2032, subject to full payment.</p>
+      <div style="overflow-x:auto"><table class="data-table">
+        <thead><tr><th>Period</th><th>Use / Guest</th><th>Rental Amount / Details</th></tr></thead>
+        <tbody>
+          <tr><td>Dates to confirm</td><td>Construction</td><td>Construction period not specified in the available contract summary</td></tr>
+          <tr><td>Stay dates to confirm</td><td>Perry’s friend — rent-free stay</td><td>Rp 0 · As reported by Sof</td></tr>
+          <tr><td>Stay dates to confirm</td><td>Ryan (via Tiani Agent)</td><td>Rp 741,000,000 received April 2024; Rp 721,000,000 after deposit refund</td></tr>
+          <tr><td>June–August 2026</td><td>John &amp; Adam</td><td>Rp 118,143,552 received; Rp 99,993,552 after deposit refund</td></tr>
+          <tr><td>1 September 2026–1 September 2027<br><small>Reported dates — contract to confirm</small></td><td>Perry’s friend — name to confirm</td><td>Rp 360,000,000 · Payment receipt not recorded</td></tr>
+        </tbody>
+      </table></div>
     </div>
 
     <!-- Outstanding lease -->
@@ -859,9 +874,7 @@
       </table>
     </div>
 
-    <div class="note-box">
-      <strong>Note:</strong> The 50% share (Rp 77,537,982) represents each party's portion of the total expenses.
-    </div>
+
   </div>
 
   <footer>
