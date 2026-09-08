@@ -109,6 +109,8 @@
     vertical-align: top;
   }
   .data-table tr:last-child td { border-bottom: none; }
+  #tab-expenses .data-table th:first-child,
+  #expenses-tbody td:first-child:not([colspan]) { min-width: 120px; white-space: nowrap; }
   .data-table .amount { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .data-table .total-row td {
     font-weight: 700; border-top: 2px solid var(--text-primary);
