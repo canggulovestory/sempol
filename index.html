@@ -665,15 +665,46 @@
 
     <!-- Expenses breakdown bar -->
     <div class="card">
-      <h3>Expense Breakdown by Category</h3>
-      <div class="legend">
-        <div class="legend-item"><div class="legend-swatch" style="background:var(--series-sof)"></div> Utilities</div>
-        <div class="legend-item"><div class="legend-swatch" style="background:var(--series-perry)"></div> Maintenance &amp; Improvements</div>
+      <h3>Expense Breakdown by Type of Work</h3>
+      <div class="bar-chart" id="expense-work-chart">
+        <div class="bar-row">
+          <div class="bar-label">Construction &amp; Fixtures</div>
+          <div class="bar-track"><div class="bar-fill rounded" style="width:43.2469%;background:var(--series-sof)"></div></div>
+          <div class="bar-value">Rp 67,065,500</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Tax &amp; Notary Fees</div>
+          <div class="bar-track"><div class="bar-fill rounded" style="width:25.1490%;background:var(--series-4)"></div></div>
+          <div class="bar-value">Rp 39,000,000</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Furnishings &amp; Equipment</div>
+          <div class="bar-track"><div class="bar-fill rounded" style="width:15.2704%;background:var(--series-3)"></div></div>
+          <div class="bar-value">Rp 23,680,744</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Utilities &amp; Waste Collection</div>
+          <div class="bar-track"><div class="bar-fill rounded" style="width:8.5397%;background:var(--series-5)"></div></div>
+          <div class="bar-value">Rp 13,243,000</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Maintenance &amp; Repairs</div>
+          <div class="bar-track"><div class="bar-fill rounded" style="width:5.1259%;background:var(--series-perry)"></div></div>
+          <div class="bar-value">Rp 7,949,000</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Cleaning &amp; Housekeeping</div>
+          <div class="bar-track"><div class="bar-fill rounded" style="width:0.3079%;background:var(--series-6)"></div></div>
+          <div class="bar-value">Rp 477,500</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Other / Unspecified</div>
+          <div class="bar-track"><div class="bar-fill rounded" style="width:2.3603%;background:var(--text-muted)"></div></div>
+          <div class="bar-value">Rp 3,660,220</div>
+        </div>
       </div>
-      <div class="split-bar">
-        <div class="segment" style="flex:10676;background:var(--series-sof)">Utilities 7%</div>
-        <div class="segment" style="flex:144733;background:var(--series-perry)">Maintenance &amp; Improvements 93%</div>
-      </div>
+      <p style="font-size:13px;margin:16px 0"><strong>Total of listed expenses: Rp 155,075,964</strong></p>
+      <p style="font-size:12px;color:var(--text-secondary);margin-bottom:16px">Grouped by the work described in each entry. Rp 333,000 of the existing expense total is not itemized in the list.</p>
 
       <div style="overflow-x:auto">
       <table class="data-table" style="margin-top:16px">
