@@ -567,16 +567,51 @@
       </table>
     </div>
 
-    <div class="card">
-      <h3>Other Transactions</h3>
-      <table class="data-table">
-        <thead>
-          <tr><th>Date</th><th>Description</th><th class="amount">Amount</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>6 Aug 2026</td><td>Paid to James — Bank Danamon</td><td class="amount" style="color:var(--status-critical)">(Rp 20,000,000)</td></tr>
-        </tbody>
-      </table>
+    <div class="card" id="johnadam-distribution">
+      <h3>Payment Distribution — Where the Money Went</h3>
+      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:16px">Net income after the Rp 18,150,000 deposit refund: <strong>Rp 99,993,552</strong></p>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-label">James (Danamon)<br><span style="font-size:11px;font-weight:400">6 Aug 2026</span></div>
+          <div class="bar-track"><div class="bar-fill rounded" style="width:20.0013%;background:var(--series-3)"></div></div>
+          <div class="bar-value">Rp 20,000,000</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Afni</div>
+          <div class="bar-track"><div class="bar-fill rounded" style="width:79.9987%;background:var(--series-sof)"></div></div>
+          <div class="bar-value">Rp 79,993,552</div>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="data-table" style="margin-top:16px">
+          <thead><tr><th>Recipient</th><th>Details</th><th class="amount">Amount</th></tr></thead>
+          <tbody>
+            <tr><td>James</td><td>Paid 6 Aug 2026 — Bank Danamon</td><td class="amount">Rp 20,000,000</td></tr>
+            <tr><td>Afni</td><td>Remaining net income, before expenses</td><td class="amount">Rp 79,993,552</td></tr>
+            <tr class="total-row"><td colspan="2">TOTAL DISTRIBUTED</td><td class="amount">Rp 99,993,552</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 style="margin-top:24px">Afni — Expenses &amp; Remaining Balance</h3>
+      <div style="overflow-x:auto">
+        <table class="data-table">
+          <thead><tr><th>Period / Item</th><th class="amount">Amount</th></tr></thead>
+          <tbody id="johnadam-expense-summary">
+            <tr><td>Afni's portion before expenses</td><td class="amount">Rp 79,993,552</td></tr>
+            <tr><td>June 2026 expenses</td><td class="amount" style="color:var(--status-critical)">(Rp 36,608,944)</td></tr>
+            <tr><td>July 2026 expenses</td><td class="amount" style="color:var(--status-critical)">(Rp 350,000)</td></tr>
+            <tr><td>August 2026 expenses</td><td class="amount" style="color:var(--status-critical)">(Rp 3,783,000)</td></tr>
+            <tr><td>September 2026 expenses</td><td class="amount" style="color:var(--status-critical)">(Rp 986,000)</td></tr>
+            <tr class="subtotal-row"><td>TOTAL RECORDED EXPENSES (JUN–SEP)</td><td class="amount">Rp 41,727,944</td></tr>
+            <tr class="total-row"><td>CALCULATED REMAINING BALANCE</td><td class="amount">Rp 38,265,608</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">
+        Expenses use the dates in the expense records, including the Rp 2,300,000 payment for 2025 trash dated 11 Jun 2026.
+        The Rp 3,150,120 entry dated May–Jun 2026 is excluded pending a monthly split.
+        The remaining balance is calculated from the listed expenses, not a verified bank balance.
+      </div>
     </div>
 
     <div class="card">
