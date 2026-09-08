@@ -257,6 +257,26 @@
   .settlement-number { font-size: clamp(26px, 3vw, 40px); font-weight: 750; line-height: 1.3; margin: 6px 0; font-variant-numeric: tabular-nums; }
   .settlement-people small { color: var(--text-secondary); font-size: 11px; }
   @media (max-width: 760px) { .settlement-people { grid-template-columns: 1fr; } }
+
+  .table-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .card, .stat-card, .two-col > *, .info-grid .v { min-width: 0; }
+  .legend { flex-wrap: wrap; }
+  @media (max-width: 600px) {
+    .page { padding: 12px 12px 32px; }
+    .header { padding-top: 12px; margin-bottom: 20px; }
+    .stats-row { grid-template-columns: 1fr; }
+    .card, .stat-card { padding: 16px; }
+    .tab-bar { width: 100%; }
+    .tab-btn { min-height: 44px; flex: 1 0 auto; padding: 8px 12px; }
+    .info-grid { grid-template-columns: 110px minmax(0, 1fr); gap: 6px 10px; }
+    .info-grid .v { overflow-wrap: anywhere; }
+    .bar-label { white-space: normal; }
+    .settlement-number { font-size: clamp(26px, 7.5vw, 36px); white-space: nowrap; }
+    .data-table td, .data-table th { padding: 10px 8px; }
+    .data-table td:first-child:not([colspan]) { white-space: nowrap; }
+    #tab-expenses .data-table { min-width: 820px; }
+    .section-title { margin-top: 28px; }
+  }
 </style>
 </head>
 <body>
@@ -348,7 +368,7 @@
     <div class="section-title">Lease Tenure Scenarios</div>
     <div class="card">
       <h3>How Long Can We Use the Villa?</h3>
-      <table class="data-table">
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table">
         <thead>
           <tr><th>Scenario</th><th>Valid Until</th><th>Remaining</th><th>Notes</th></tr>
         </thead>
@@ -372,7 +392,7 @@
             <td>Disputed — not agreed by Second Party</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
       <div class="note-box" style="margin-top:16px">
         Per contract Article 2: if Payment 4 is not made, the lease is only valid for the period already paid.
         Rp 1,240,000,000 &divide; Rp 185,000,000/yr = ~6.7 years from 25 Dec 2022 = ~Sep 2029.
@@ -398,7 +418,7 @@
         </div>
       </div>
 
-      <table class="data-table">
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table">
         <thead>
           <tr><th>#</th><th>Due Date</th><th class="amount">Amount</th><th>Status</th><th>Bank Account</th></tr>
         </thead>
@@ -438,7 +458,7 @@
             <td colspan="2"></td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
       <div class="note-box">
         Late penalty: 1% per month on remaining balance (Rp 6,100,000/month).
       </div>
@@ -446,7 +466,7 @@
 
     <div class="card">
       <h3>Payment Coverage Calculation</h3>
-      <table class="data-table">
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table">
         <thead>
           <tr><th>Total Paid</th><th>Annual Rate</th><th>Years Covered</th><th>Start</th><th>Covered Until</th></tr>
         </thead>
@@ -460,7 +480,7 @@
             <td>10.00 years</td><td>25 Dec 2022</td><td>25 Dec 2032</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
   </div>
 
@@ -509,7 +529,7 @@
 
       <div style="height:1px;background:var(--gridline);margin:16px 0"></div>
 
-      <table class="data-table">
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table">
         <thead>
           <tr><th>Date</th><th>Type</th><th class="amount">Amount</th><th>Bank</th><th>Account Number</th><th>Account Name</th></tr>
         </thead>
@@ -529,7 +549,7 @@
             <td colspan="3"></td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
 
     <!-- John & Adam Income Section -->
@@ -559,7 +579,7 @@
       <div class="note-box" style="margin-bottom:16px">
         <strong>Terms:</strong> Rp 36,000,000/month &bull; First month 30% discount (Rp 10,800,000 off) &bull; Deposit Rp 20,000,000
       </div>
-      <table class="data-table">
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table">
         <thead>
           <tr><th>Month</th><th class="amount">Payment 1</th><th class="amount">Payment 2</th><th class="amount">Monthly Total</th></tr>
         </thead>
@@ -580,7 +600,7 @@
             <td class="amount">Rp 99,993,552</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
 
     <div class="card" id="johnadam-distribution">
@@ -605,7 +625,7 @@
       </div>
       <h3 style="margin-top:24px">Sofian — Expenses &amp; Remaining Balance</h3>
       <div style="overflow-x:auto">
-        <table class="data-table">
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table">
           <thead><tr><th>Period / Item</th><th class="amount">Amount</th></tr></thead>
           <tbody id="johnadam-expense-summary">
             <tr><td>What Sof received before expenses</td><td class="amount">Rp 79,993,552</td></tr>
@@ -617,7 +637,7 @@
             <tr class="subtotal-row"><td>TOTAL RECORDED EXPENSES (MAY–SEP)</td><td class="amount">Rp 45,006,464</td></tr>
             <tr class="total-row"><td>CALCULATED REMAINING BALANCE</td><td class="amount">Rp 34,987,088</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
 
@@ -626,7 +646,7 @@
       <div class="note-box" style="margin-bottom:16px">
         <strong>Original deposit:</strong> Rp 20,000,000 &bull; <strong>Net refund:</strong> Rp 18,150,000
       </div>
-      <table class="data-table">
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table">
         <thead>
           <tr><th>Item</th><th>Detail</th><th class="amount">Amount</th></tr>
         </thead>
@@ -636,7 +656,7 @@
           <tr><td>Late check-out</td><td>4 hours × Rp 150,000/hr</td><td class="amount">Rp 600,000</td></tr>
           <tr class="total-row"><td colspan="2">TOTAL DEDUCTIONS</td><td class="amount">Rp 1,850,000</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
   </div>
 
@@ -707,7 +727,7 @@
       <p style="font-size:12px;color:var(--text-secondary);margin-bottom:16px">Grouped by the work described in each entry.</p>
 
       <div style="overflow-x:auto">
-      <table class="data-table" style="margin-top:16px">
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table" style="margin-top:16px">
         <thead>
           <tr><th>Date</th><th>Category</th><th>Item</th><th>Quantity</th><th>Description</th><th class="amount">Amount</th></tr>
         </thead>
@@ -797,7 +817,7 @@
             <td class="amount" id="exp-grand-total">Rp 155,075,964</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
       </div>
     </div>
   </div>
@@ -810,25 +830,25 @@
         <h3>Perry</h3>
         <div class="settlement-metric"><div class="label">PAID</div><div class="settlement-number">Rp 0</div><small>To be confirmed</small></div>
         <div class="settlement-metric"><div class="label">RENTAL INCOME RECEIVED</div><div class="settlement-number" style="color:var(--series-4)">Rp 121,000,000</div></div>
-        <table class="data-table"><tbody>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table"><tbody>
           <tr><td>Ryan<br><small>10 &amp; 12 Apr 2024</small></td><td class="amount">Rp 101,000,000</td></tr>
           <tr><td>John &amp; Adam<br><small>6 Aug 2026</small></td><td class="amount">Rp 20,000,000</td></tr>
-        </tbody></table>
+        </tbody></table></div>
       </div>
       <div class="card">
         <h3>Sof</h3>
         <div class="settlement-metric"><div class="label">PAID</div><div class="settlement-number">Rp 110,069,500</div><small>Overall paid by Sof</small></div>
         <div class="settlement-metric"><div class="label">RENTAL INCOME — AFTER EXPENSES</div><div class="settlement-number" style="color:var(--series-sof)">Rp 34,987,088</div></div>
-        <table class="data-table"><tbody>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table"><tbody>
           <tr><td>John &amp; Adam<br><small>Jun–Aug 2026</small></td><td class="amount">Rp 34,987,088</td></tr>
-        </tbody></table>
+        </tbody></table></div>
 
       </div>
     </div>
 
     <div class="card">
       <h3>Stay History</h3>
-      <div style="overflow-x:auto"><table class="data-table">
+      <div style="overflow-x:auto"><div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table">
         <thead><tr><th>Period</th><th>Guest / Use</th><th class="amount">Amount (Rp)</th><th class="amount">Refund (Rp)</th><th class="amount">Net Received (Rp)</th></tr></thead>
         <tbody>
           <tr><td>Oct 2022–Oct 2023</td><td>Construction</td><td class="amount">—</td><td class="amount">—</td><td class="amount">—</td></tr>
@@ -837,7 +857,7 @@
           <tr><td>Jun–Aug 2026</td><td>John &amp; Adam</td><td class="amount">118,143,552</td><td class="amount">18,150,000</td><td class="amount">99,993,552</td></tr>
           <tr><td>1 Sep 2026–1 Sep 2027</td><td>Perry’s friend</td><td class="amount">360,000,000</td><td class="amount">—</td><td class="amount">—</td></tr>
         </tbody>
-      </table></div>
+      </table></div></div>
     </div>
 
 
