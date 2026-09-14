@@ -277,6 +277,8 @@
     #tab-expenses .data-table { min-width: 820px; }
     .section-title { margin-top: 28px; }
   }
+  .source-details summary { cursor: pointer; font-size: 15px; font-weight: 700; }
+  .source-caption { font-size: 12px; color: var(--text-secondary); margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -343,6 +345,10 @@
       <div class="card">
         <h3>Villa Details</h3>
         <div class="info-grid">
+          <span class="k">TVM Code</span><span class="v">V10S3</span>
+          <span class="k">Address</span><span class="v">Jl. Sempol No.17b, Pererenan, Kec. Mengwi, Badung, Bali 80351</span>
+          <span class="k">Co-investors</span><span class="v">TVM 50% · Perry 50%</span>
+          <span class="k">Pool Cleaning</span><span class="v">2× weekly · Tuesday &amp; Saturday</span>
           <span class="k">Villa Name</span><span class="v">Sempol Villa</span>
           <span class="k">Bedrooms</span><span class="v">3 Bedrooms</span>
           <span class="k">Location</span><span class="v">Banjar Padang Linjong, Canggu</span>
@@ -486,6 +492,15 @@
 
   <!-- ==================== INCOME TAB ==================== -->
   <div id="tab-income" class="tab-content">
+    <details class="card source-details">
+      <summary>Previous Marketing Rates</summary>
+      <div class="info-grid" style="margin-top:16px">
+        <span class="k">Monthly ask</span><span class="v">~Rp 45,000,000</span>
+        <span class="k">Annual listing</span><span class="v">Rp 380,000,000</span>
+        <span class="k">Agent commission</span><span class="v">10% discussed</span>
+      </div>
+      <p class="source-caption">Historical asking prices, not rent received.</p>
+    </details>
     <div class="section-title">Rental Income — Guest: Ryan (via Tiani Agent) · 6 Apr 2024–6 Apr 2026</div>
 
     <div class="stats-row">
@@ -820,6 +835,20 @@
       </table></div>
       </div>
     </div>
+    <details class="card source-details" id="expense-reconciliation">
+      <summary>Additional Records — To Reconcile</summary>
+      <p class="source-caption">Excluded from totals until matched to the expense list.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Additional expense records"><table class="data-table">
+        <thead><tr><th>Item</th><th class="amount">Amount (Rp)</th><th>Check</th></tr></thead>
+        <tbody>
+          <tr><td>Doors — remaining 50%</td><td class="amount">11,218,000</td><td>Match against existing glass-door payments</td></tr>
+          <tr><td>Laundry</td><td class="amount">770,000</td><td>Confirm date, payer and any grouped entry</td></tr>
+          <tr><td>Other — 17 items</td><td class="amount">4,791,120</td><td>Itemized breakdown needed to avoid duplicates</td></tr>
+          <tr><td>Broken bidet — deposit variant</td><td class="amount">100,000</td><td>Unconfirmed; existing deduction stays 1,850,000</td></tr>
+        </tbody>
+      </table></div>
+      <p class="source-caption">Reported refurbishment total: Rp 51,875,464, including items already listed. Not an additional expense.</p>
+    </details>
   </div>
 
   <!-- ==================== SETTLEMENT TAB ==================== -->
@@ -828,7 +857,7 @@
     <div class="settlement-people" id="settlement-comparison">
       <div class="card">
         <h3>Perry</h3>
-        <div class="settlement-metric"><div class="label">PAID</div><div class="settlement-number">Rp 0</div><small>To be confirmed</small></div>
+        <div class="settlement-metric"><div class="label">PAID</div><div class="settlement-number">Rp 0</div><small>Cash total to reconcile · contributions below</small></div>
         <div class="settlement-metric"><div class="label">RENTAL INCOME RECEIVED</div><div class="settlement-number" style="color:var(--series-4)">Rp 121,000,000</div></div>
         <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="data-table"><tbody>
           <tr><td>Ryan<br><small>10 &amp; 12 Apr 2024</small></td><td class="amount">Rp 101,000,000</td></tr>
@@ -844,6 +873,18 @@
         </tbody></table></div>
 
       </div>
+    </div>
+
+    <div class="card" id="perry-contributions">
+      <h3>Perry — Reported Contributions</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Perry contributions"><table class="data-table">
+        <thead><tr><th>Contribution</th><th class="amount">Amount (Rp)</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Furniture</td><td class="amount">~150,000,000</td><td>Retained asset · non-cash contribution</td></tr>
+          <tr><td>Jeffrey — refurbishment</td><td class="amount">20,000,000</td><td>Reported paid in full · reimbursement requested</td></tr>
+        </tbody>
+      </table></div>
+      <p class="source-caption">Source: deal summary, 29 Jul 2026. Not added to settlement totals; reimbursement match pending.</p>
     </div>
 
     <div class="card">
